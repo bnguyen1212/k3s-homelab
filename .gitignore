@@ -1,0 +1,3 @@
+*.secret.yaml
+*.plaintext.yaml
+keys.txt

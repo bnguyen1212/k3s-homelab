@@ -1,0 +1,15 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: chromadb
+  namespace: chromadb
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`chromadb.bnguyen.dev`)
+      kind: Rule
+      services: 
+        - name: chromadb
+          port: 8000
+
